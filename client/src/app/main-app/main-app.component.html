@@ -1,3 +1,100 @@
 <div *ngIf="data">
-    <h1>{{ data | json }}</h1>
+    <h1>Perfil profesional</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h5>
+                    {{data[0].name + ' ' + data[0].lastName }}
+                </h5>
+            </div>
+            <p>
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+                    Descripcion
+                </button>
+            </p>
+            <div style="min-height: 120px;">
+                <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                    <div class="card card-body" style="width: 300px;">
+                        {{ data[0].summary }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+
+            </div>
+        </div>
+        <h2>Datos personales</h2>
+        <div class="container text-center">
+            <div class="row align-items-start">
+                <div class="col">
+                    <strong>Edad</strong>
+                </div>
+                <div class="col">
+                    <strong>Ciudad de Origen</strong>
+                </div>
+                <div class="col">
+                    <strong>Correo Electronico</strong>
+                </div>
+                <div class="col">
+                    <strong>Nacionalidad</strong>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center">
+            <div class="row align-items-start">
+                <div class="col">
+                    24
+                </div>
+                <div class="col">
+                    {{ data[0].city }}
+                </div>
+                <div class="col">
+                    {{ data[0].email }}
+                </div>
+                <div class="col">
+                    {{ data[0].country }}
+                </div>
+            </div>
+        </div>
+
+        <h2>Intereses</h2>
+        <div class="container">
+            <li>
+                Ciberseguridad
+            </li>
+            <li>
+                Programacion
+            </li>
+            <li>
+                Proyectos de software
+            </li>
+        </div>
+
+        <h2>Lenguajes de programacion</h2>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Lenguajes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>C++</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>C#</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Java</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
 </div>

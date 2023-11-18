@@ -23,8 +23,5 @@ export class MainAppComponent implements OnInit{
         console.error(error);
       }
     );
-
   }
-
-
 }
